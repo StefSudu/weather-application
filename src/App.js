@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import SearchBar from "./components/searchBar";
+import { useState } from 'react';
 
 function App() {
+  const [weatherCards, setWeatherCards] = useState([]);
+
+  const handleSearch = (newWeatherCard) => {
+    setWeatherCards([...weatherCards, newWeatherCard]);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="searchBarContainer">
+        <SearchBar placeholder="Enter a country or city to see the weather" onSearch={handleSearch}/>
+      </div>
+      <div className="WeatherCardContainer">
+        {weatherCards.length > 0 ? weatherCards.map((card, index) => (
+          <div className="eachCardContainer" key={index}>
+            {card}
+          </div>
+        )) : ' '}
+      </div>
     </div>
   );
 }

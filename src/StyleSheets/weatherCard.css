@@ -1,0 +1,49 @@
+.weatherCardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width:100%;
+    padding:5%;
+    border-radius: 20px;
+    background: rgb(255,134,0);
+    background: linear-gradient(90deg, rgba(255,134,0,1) 0%, rgba(255,0,80,1) 100%);
+}
+
+.weatherDataCountry {
+    width: 100%;
+}
+
+.weatherDataSmallerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width:100%;
+}
+
+.weatherDataTitles {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    width:100%;
+}
+
+.weatherDataInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.weatherDataDate {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+}
+.weatherDataMinTemp {
+    display: flex;
+    flex-direction: column;
+}
+.weatherDataMaxTemp {
+    display: flex;
+    flex-direction: column;
+}
