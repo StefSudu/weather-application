@@ -5,6 +5,7 @@ html {
   background-color: #222;
   color: #fff;
   height: 100%;
+  font-family:monospace
 }
 
 .App {
@@ -20,15 +21,18 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40%;
-  height: 10%;
+  width: 50%;
+  height: 30%;
 }
 
 .WeatherCardContainer {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 2%;
   width: 100%;
+  padding-top: 10px;
+
 }
 
 .eachCardContainer {

@@ -1,7 +1,19 @@
 import '../StyleSheets/weatherCard.css'
 import ClipLoader from "react-spinners/ClipLoader";
+import { useEffect, useState } from 'react';
 
 export default function WeatherCard({info, isLoading}) {
+    const [hot, setHot ] = useState(true);
+
+    useEffect(() => {
+        var averageSum = 0;
+
+        for (let i = 0; i < 6; i++) {
+            averageSum += info[2][i] + info[3][i];
+        }
+        setHot(averageSum/6);
+    }, [hot, info])
+
     return (
         <>
             {isLoading ? 
@@ -13,7 +25,9 @@ export default function WeatherCard({info, isLoading}) {
                 /> : 
                 <div className="weatherCardContainer">
                     <div className="weatherDataCountry">
-                    <p>{info[0]}</p>
+                    <p>{info[0]}
+                        {hot > 19 ? <p>Hot</p> : <p>Cold</p>}
+                    </p>
                     </div>
                     <div className="weatherDataSmallerContainer">
                         <div className="weatherDataTitles">

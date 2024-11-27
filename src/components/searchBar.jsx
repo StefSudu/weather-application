@@ -7,17 +7,31 @@ import { useState } from 'react';
 
 export default function SearchBar({placeholder, onSearch}) {
     const [place, setPlace] = useState('');
+    const [alert, setAlert] = useState(false);
 
     const handleInputChange = (e) => {
         setPlace(e.target.value);
     };
 
     const handleSearchClick = () => {
-        const data = <FetchData place={place} />;
-        onSearch(data);
+        if (place === "") {
+            setAlert(true)
+        } else {
+            const data = <FetchData place={place} />;
+            onSearch(data);
+            setAlert(false);
+        }
     };
 
     return ( 
+          
+        <div className='searchBarContainer'>
+            <div className="alertSearchContainer">
+                {alert ? 
+                    <p className="alertSearch">Enter a location</p> : 
+                    null
+                }
+            </div> 
             <div className="searchBarContainerComponent">   
                 <SearchIcon fontSize="small" /> 
                 <input className="inputSearchBarField"
@@ -27,6 +41,9 @@ export default function SearchBar({placeholder, onSearch}) {
                 <IconButton color='primary' aria-label="delete"  onClick={handleSearchClick}>
                     <KeyboardDoubleArrowRightIcon />
                 </IconButton>          
-            </div>  
+            </div> 
+
+        </div>
+        
     )
 };

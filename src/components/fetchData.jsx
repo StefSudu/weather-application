@@ -34,7 +34,7 @@ export default function FetchData({place}) {
                 setLoading(true);
                 const locationParameters = formatPlace(place);
                 // get geolocation from user search
-                const geolocationData = await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${locationParameters}&key=${process.env.MAPS_GOOGLE_APIS_GEOCODE_KEY}`);
+                const geolocationData = await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${locationParameters}&key=${process.dotenv.REACT_APP_MAPS_GOOGLE_APIS_GEOCODE_KEY}`);
                 setLat(geolocationData.data.results[0].geometry.location.lat);
                 setLong(geolocationData.data.results[0].geometry.location.lng);
                 setCountryName(

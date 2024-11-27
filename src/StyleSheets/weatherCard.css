@@ -6,9 +6,9 @@
 
     width:100%;
     padding:5%;
-    border-radius: 20px;
-    background: rgb(255,134,0);
-    background: linear-gradient(90deg, rgba(255,134,0,1) 0%, rgba(255,0,80,1) 100%);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+
 }
 
 .weatherDataCountry {
