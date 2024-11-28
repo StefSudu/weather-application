@@ -1,0 +1,25 @@
+.headerContainer {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.headerContainerLeftOptions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.headerContainerMiddleOptions {
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.headerContainerRightOptions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

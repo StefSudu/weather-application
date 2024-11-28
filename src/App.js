@@ -1,6 +1,7 @@
 import './App.css'
 import SearchBar from "./components/searchBar";
 import { useState } from 'react';
+import Header from './components/header';
 
 function App() {
   const [weatherCards, setWeatherCards] = useState([]);
@@ -11,6 +12,9 @@ function App() {
 
   return (
     <div className="App">
+      <div className="header">
+        <Header />
+      </div>
       <div className="searchBarContainer">
         <SearchBar placeholder="Enter a country or city to see the weather" onSearch={handleSearch}/>
       </div>
