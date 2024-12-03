@@ -1,21 +1,31 @@
 import React from "react";
 import '../StyleSheets/Header.css'
+import Favorite from '@mui/icons-material/FavoriteBorder';
 
 export default function Header() {
     return (
         <div className="headerContainer">
             <div className="headerContainerLeftOptions">
-                <p>button 1</p>
-                <p>button 2</p>
+                <div className="leftOptionButton">
+                    <Favorite sx={{fontSize:22}}/>
+                </div>
+                <div className="leftOptionButton">
+                    <p>b</p>
+                </div>
+                <div className="leftOptionButton">
+                    <p>b</p>
+                </div>
+                <div className="leftOptionButton">
+                    <p>b</p>
+                </div>
             </div>
             <div className="headerContainerMiddleOptions">
                 <div className="headerLogo">
-                    <p>Weather App</p>
+                    <p>Weather Application</p>
                 </div>
             </div>
             <div className="headerContainerRightOptions">
-                <p>button 1</p>
-                <p>button 2</p>
+                <p>Login / Create Account</p>
             </div>
         </div>
     )
