@@ -1,6 +1,9 @@
 import React from "react";
 import '../StyleSheets/Header.css'
 import Favorite from '@mui/icons-material/FavoriteBorder';
+import RocketLaunchOutline from '@mui/icons-material/RocketLaunchOutlined'
+import DisplaySettingsOutlined from '@mui/icons-material/DisplaySettingsOutlined'
+import DeleteSweep from '@mui/icons-material/DeleteSweepOutlined'
 
 export default function Header() {
     return (
@@ -10,13 +13,13 @@ export default function Header() {
                     <Favorite sx={{fontSize:22}}/>
                 </div>
                 <div className="leftOptionButton">
-                    <p>b</p>
+                    <RocketLaunchOutline sx={{fontSize:22}}/>
                 </div>
                 <div className="leftOptionButton">
-                    <p>b</p>
+                    <DisplaySettingsOutlined sx={{fontSize:22}}/>
                 </div>
                 <div className="leftOptionButton">
-                    <p>b</p>
+                    <DeleteSweep sx={{fontSize:22}}/>
                 </div>
             </div>
             <div className="headerContainerMiddleOptions">
