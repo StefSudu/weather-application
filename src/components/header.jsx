@@ -3,7 +3,7 @@ import '../StyleSheets/Header.css'
 import Favorite from '@mui/icons-material/FavoriteBorder';
 import RocketLaunchOutline from '@mui/icons-material/RocketLaunchOutlined'
 import DisplaySettingsOutlined from '@mui/icons-material/DisplaySettingsOutlined'
-import DeleteSweep from '@mui/icons-material/DeleteSweepOutlined'
+import DeleteSweep from '@mui/icons-material/SwitchAccessShortcutAddOutlined'
 
 export default function Header() {
     return (
