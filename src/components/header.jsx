@@ -24,7 +24,7 @@ export default function Header() {
             </div>
             <div className="headerContainerMiddleOptions">
                 <div className="headerLogo">
-                    <p>Weather Application</p>
+                    <p id="application-title">Weather Application</p>
                 </div>
             </div>
             <div className="headerContainerRightOptions">

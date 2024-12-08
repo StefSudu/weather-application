@@ -7,6 +7,10 @@
     justify-content: space-evenly;
 }
 
+#application-title {
+    font-size: 20px;
+}
+
 .headerContainerLeftOptions {
     display: flex;
     flex-direction: row;
